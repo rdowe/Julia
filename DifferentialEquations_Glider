@@ -4,6 +4,21 @@ using DifferentialEquations
 using Plots
 
 
+#= Project Description
+
+This program uses Julia's DifferentialEquations package to solve a system of equations describing the motion of a glider.
+
+    d\theta/dt = (s^2 - cos(\theta)) / s
+    ds/dt = -sin(\theta) - Ds^2
+    
+where theta is the angle relative to the ground, s is the speed, and D is the drag coefficient.
+
+It was used for a project in the course Differential Equations, in order to visualize the effects of different values for drag.
+
+The function glide! defines the system, and the functions ODEProblem() and solve() calculate the solution based on given initial conditions. Then, the solution is
+plotted in the phase plane (s vs theta) and with time graphs for s vs t and theta vs t using the layout macro.
+=#
+
 
 #(θ, s)
 
